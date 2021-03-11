@@ -8,17 +8,28 @@ namespace ClassMethodDemo
     {
         public void Ekle(Musteri musteri)
         {
-            Console.WriteLine("Müşteri Ekleme Başarılı! : " + musteri.Adi + musteri.SoyAdi);
+            Console.WriteLine("Müşteri Ekleme Başarılı! : " + musteri.Adi +" "+ musteri.SoyAdi);
+            Console.WriteLine("------------------------------");
         }
 
-        public void Listele(Musteri musteri)
+        public void Listele(Musteri[] musteriler)
         {
-            Console.WriteLine("Müşteriler Listelendi! : " + musteri.Adi + musteri.SoyAdi);
+            foreach (Musteri musteri in musteriler)
+            {
+                Console.WriteLine(musteri.Id);
+                Console.WriteLine(musteri.Adi);
+                Console.WriteLine(musteri.SoyAdi);
+                Console.WriteLine(musteri.TcNo);
+                Console.WriteLine(musteri.CepTelefonu);
+                Console.WriteLine(musteri.DogumTarihi);
+                Console.WriteLine("Müşteri Listelendi!");
+                Console.WriteLine("------------------------------");
+            }
         }
 
         public void Sil(Musteri musteri)
         {
-            Console.WriteLine("Müşteri Silindi!:" + musteri.Adi + musteri.SoyAdi);
+            Console.WriteLine("Müşteri Silindi!:" + musteri.Adi +" "+ musteri.SoyAdi);
         }
     }
 }

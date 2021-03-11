@@ -25,7 +25,7 @@ namespace ClassMethodDemo
             Musteri musteri3 = new Musteri();
             musteri3.Id = 3;
             musteri3.Adi = "Halit";
-            musteri3.SoyAdi = "Ertuığrul";
+            musteri3.SoyAdi = "Ertuğrul";
             musteri3.TcNo = "56789012341";
             musteri3.CepTelefonu = 544231456;
             musteri3.DogumTarihi = 1955;            
@@ -37,12 +37,30 @@ namespace ClassMethodDemo
 
             Musteri[] musteriler = new Musteri[] { musteri1, musteri2, musteri3 };
 
-            for (int i = 0; i < musteriler.Length; i++)
-            {
-                musteriManager.Listele(musteriler[i]);
-            }
+            musteriManager.Listele(musteriler);
+
+            musteriManager.Sil(musteri1);
+            Console.WriteLine("-------------------------*");
 
 
+
+
+            //for (int i = 0; i < musteriler.Length; i++)
+            //{
+            //  musteriManager.Listele(musteriler[i]);
+            //}
+
+
+            //foreach (Musteri musteri in musteriler)
+            //{
+            //Console.WriteLine(musteri.Id);
+            //Console.WriteLine(musteri.Adi);
+            //Console.WriteLine(musteri.SoyAdi);
+            //Console.WriteLine(musteri.TcNo);
+            //Console.WriteLine(musteri.CepTelefonu);
+            //Console.WriteLine(musteri.DogumTarihi);
+            //Console.WriteLine("--------------------");
+            //}
         }
     }
 }
